@@ -1,10 +1,12 @@
 import React from 'react';
-import { HeaderContainer, Title, Nav, NavLink } from './styles';
+import { HeaderContainer, Title, Nav, NavLink, TitleLink } from './styles';
 
 const Header = () => {
     return (
         <HeaderContainer>
-            <Title>My App</Title>
+            <TitleLink href='/'>
+                <Title>My App</Title>
+            </TitleLink>
             <Nav>
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/contact">Contact</NavLink>

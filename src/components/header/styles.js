@@ -27,3 +27,8 @@ export const NavLink = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const TitleLink = styled.a`
+  text-decoration: none;
+  color: white;
+`;

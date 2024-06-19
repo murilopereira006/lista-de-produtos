@@ -1,16 +1,15 @@
 import React from 'react';
-import { ItemContainer, ItemName, ItemPrice, ItemCategory } from './styles';
-import { Link } from 'react-router-dom';
+import { ItemContainer, ItemName, ItemPrice, ItemCategory, StyledLink } from './styles';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, hoverColor = '#FFA500' }) => {
     return (
-        <ItemContainer>
-            <Link to={`/product/${product.id}`}>
+        <StyledLink to={`/product/${product.id}`}>
+            <ItemContainer hoverColor={hoverColor}>
                 <ItemName>{product.nome}</ItemName>
-            </Link>
-            <ItemPrice>{`R$ ${product.preco.toFixed(2)}`}</ItemPrice>
-            <ItemCategory>{product.categoria}</ItemCategory>
-        </ItemContainer>
+                <ItemPrice>{`R$ ${product.preco.toFixed(2)}`}</ItemPrice>
+                <ItemCategory>{product.categoria}</ItemCategory>
+            </ItemContainer>
+        </StyledLink>
     );
 };
 
