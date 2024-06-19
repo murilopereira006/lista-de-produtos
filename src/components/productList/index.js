@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProductItem from '../productItem';
 import { ListContainer, PaginationContainer, PageButton } from './styles';
 
-const ProductList = ({ products, category, sort, priceRange, itemsPerPage }) => {
+const ProductList = ({ products, category, sort, priceRange, itemsPerPage, searchQuery }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -26,8 +26,12 @@ const ProductList = ({ products, category, sort, priceRange, itemsPerPage }) => 
             filtered = filtered.sort((a, b) => sort === 'asc' ? a.nome.localeCompare(b.nome) : b.nome.localeCompare(a.nome));
         }
 
+        if (searchQuery) {
+            filtered = filtered.filter(product => product.nome.toLowerCase().includes(searchQuery.toLowerCase()));
+        }
+
         setFilteredProducts(filtered);
-    }, [products, category, sort, priceRange]);
+    }, [products, category, sort, priceRange, searchQuery]);
 
     const indexOfLastProduct = currentPage * itemsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;

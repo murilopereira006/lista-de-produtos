@@ -14,3 +14,10 @@ export const Select = styled.select`
 `;
 
 export const Option = styled.option``;
+
+export const Input = styled.input`
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+`;

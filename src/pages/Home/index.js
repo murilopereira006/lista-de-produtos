@@ -9,6 +9,7 @@ const Home = () => {
     const [sort, setSort] = useState('');
     const [priceRange, setPriceRange] = useState('');
     const [itemsPerPage, setItemsPerPage] = useState(20);
+    const [searchQuery, setSearchQuery] = useState('');
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -28,6 +29,8 @@ const Home = () => {
                 setPriceRange={setPriceRange}
                 itemsPerPage={itemsPerPage}
                 setItemsPerPage={setItemsPerPage}
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
             />
             <ProductList
                 products={produtos}
@@ -35,6 +38,7 @@ const Home = () => {
                 sort={sort}
                 priceRange={priceRange}
                 itemsPerPage={itemsPerPage}
+                searchQuery={searchQuery}
             />
         </HomeContainer>
     );
