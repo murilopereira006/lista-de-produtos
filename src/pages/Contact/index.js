@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <ContactContainer>
             <Title>Contato</Title>
-            <Description>Desenvolvedor de Software com paixão por criar soluções inovadoras.</Description>
+            <Description>Eu sou Murilo Pereira desenvolvedor de software com paixão por criar soluções inovadoras.</Description>
 
             <LinksContainer>
                 <LinkItem href="https://github.com/murilopereira006" target="_blank">

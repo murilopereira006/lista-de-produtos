@@ -1,7 +1,7 @@
 import React from 'react';
 import { ItemContainer, ItemName, ItemPrice, ItemCategory, StyledLink } from './styles';
 
-const ProductItem = ({ product, hoverColor = '#FFA500' }) => {
+const ProductItem = ({ product, hoverColor }) => {
     return (
         <StyledLink to={`/product/${product.id}`}>
             <ItemContainer hoverColor={hoverColor}>

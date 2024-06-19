@@ -31,9 +31,4 @@ export const ItemCategory = styled.p`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: inherit;
-
-    &:hover ${ItemContainer} {
-        background: ${props => props.hoverColor ? props.hoverColor : '#a0a0a0'};
-        color: #fff;
-    }
 `;
